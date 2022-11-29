@@ -49,38 +49,38 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://auth.nuxtjs.org/
-    '@nuxtjs/auth',
+    // '@nuxtjs/auth',
 
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'http://localhost:8000',
+    baseURL: 'https://jsonplaceholder.typicode.com/',
   },
 
   router: {
-    middleware: ['auth'],
+    // middleware: [''],
   },
 
   auth: {
-    strategies: {
-      local: {
-        token: {
-          property: 'token',
-          global: true,
+    // strategies: {
+    //   local: {
+    //     token: {
+    //       property: 'token',
+    //       global: true,
          
-        },
-        user: {
-          property: 'user',
-        },
-        endpoints: {
-          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
-          logout: { url: '/api/auth/logout', method: 'post' },
-          user: { url: '/api/auth/user', method: 'get' },
-        },
-      },
-    },
+    //     },
+    //     user: {
+    //       property: 'user',
+    //     },
+    //     endpoints: {
+    //       login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+    //       logout: { url: '/api/auth/logout', method: 'post' },
+    //       user: { url: '/api/auth/user', method: 'get' },
+    //     },
+    //   },
+    // },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
